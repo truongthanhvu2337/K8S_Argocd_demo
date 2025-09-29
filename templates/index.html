@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+</head>
+<body>
+    <h1>Todo App (MySQL + Redis)</h1>
+    <form method="POST">
+        <input type="text" name="task" placeholder="New task" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task['name'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
